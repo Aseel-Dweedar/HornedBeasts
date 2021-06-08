@@ -4,8 +4,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        {" "}
-        <h1> HORNED BEASTS </h1>{" "}
+        <h1> HORNED BEASTS </h1>
       </header>
     );
   }
