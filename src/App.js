@@ -7,29 +7,19 @@ import Main from "./component/Main";
 import SelectedBeast from "./component/SelectedBeast";
 import BeastsData from "./component/BeastsData.json";
 
+
 class App extends React.Component {
   constructor() {
     super();
-    BeastsData.forEach((beast) => {
-      beast.value = 0;
-    });
     this.state = {
-      BeastsData: BeastsData,
       newSelectedBeast: {},
       show: false,
     };
   }
 
-  addValueAndModel = (title) => {
-    let newSelectedBeast = {};
-    this.state.BeastsData.forEach((beast) => {
-      if (beast.title === title) {
-        beast.value++;
-        newSelectedBeast = beast;
-      }
-    });
+  renderModel = (newBeastProp) => {
     this.setState({
-      newSelectedBeast: newSelectedBeast,
+      newSelectedBeast: newBeastProp,
       show: true,
     });
   };
@@ -44,18 +34,13 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Main
-          BeastsData={this.state.BeastsData}
-          addValueAndModel={this.addValueAndModel}
-        />
+        <Main BeastsData={BeastsData}
+          renderModel={this.renderModel} />
         <Footer />
         <SelectedBeast
-          title={this.state.newSelectedBeast.title}
-          images={this.state.newSelectedBeast.image_url}
-          description={this.state.newSelectedBeast.description}
+          all = {this.state.newSelectedBeast}
           show={this.state.show}
-          close={this.close}
-        />
+          close={this.close}/>
       </div>
     );
   }
