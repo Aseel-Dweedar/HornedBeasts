@@ -7,20 +7,26 @@ import Main from "./component/Main";
 import SelectedBeast from "./component/SelectedBeast";
 import BeastsData from "./component/BeastsData.json";
 
-
 class App extends React.Component {
   constructor() {
     super();
+    BeastsData.forEach((beast) => {
+      beast.value = 0;
+    });
     this.state = {
+      BeastsData : BeastsData,
       newSelectedBeast: {},
       show: false,
     };
   }
 
-  renderModel = (newBeastProp) => {
+  renderModel = (newBeastPropTitle) => {
+    let newBeastProp = this.state.BeastsData.filter((beast) => beast.title === newBeastPropTitle)[0];
+    newBeastProp.value++;
     this.setState({
       newSelectedBeast: newBeastProp,
       show: true,
+      value: this.state.value + 1,
     });
   };
 
@@ -34,13 +40,15 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <Main BeastsData={BeastsData}
-          renderModel={this.renderModel} />
+        <Main
+        BeastsData={BeastsData}
+        renderModel={this.renderModel} />
         <Footer />
         <SelectedBeast
-          all = {this.state.newSelectedBeast}
+          all={this.state.newSelectedBeast}
           show={this.state.show}
-          close={this.close}/>
+          close={this.close}
+        />
       </div>
     );
   }
