@@ -70,7 +70,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ```
-Feature #1: Display images (lab 02)
+ (lab 01) Feature #1: create-react-app
+```
+
+Number and name of feature: 1
+
+Estimate of time needed to complete: 2 hour.
+
+Start time: 3:00pm
+
+Finish time: 6:00pm
+
+Actual time needed to complete: 3 hour.
+
+```
+ (lab 02) Feature #1: Display images
 ```
 
 Number and name of feature: 1
@@ -84,7 +98,7 @@ Finish time: 6:00pm
 Actual time needed to complete: 1 hour.
 
 ```
-Feature #2: Allow users to vote for their favorite beast (lab 02)
+ (lab 02) Feature #2: Allow users to vote for their favorite beast
 ```
 
 Number and name of feature:1
@@ -98,7 +112,7 @@ Finish time: 7:30 pm.
 Actual time needed to complete: 1:30 hours
 
 ```
-Feature #1: Display a Modal (lab 03)
+(lab 03) Feature #1: Display a Modal 
 ```
 
 Number and name of feature: 1
