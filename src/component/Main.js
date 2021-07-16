@@ -17,9 +17,7 @@ class Main extends React.Component {
         filteredData: this.props.BeastsData,
       });
     } else {
-      let newFilteredData = this.props.BeastsData.filter(
-        (beast) => beast.horns === Number(value)
-      );
+      let newFilteredData = this.props.BeastsData.filter((beast) => beast.horns === Number(value));
       this.setState({
         filteredData: newFilteredData,
       });
@@ -28,7 +26,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ display: "grid", gridTemplateColumns: "200px 1fr", width: "98%", margin: "auto" }}>
         <FilteringForm filterResult={this.filterResult} />
         <CardColumns style={{ display: "flex", flexWrap: "wrap" }}>
           {this.state.filteredData.map((beasts, i) => {

@@ -2,7 +2,6 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 
 class HornedBeast extends React.Component {
-  
   renderModel = () => {
     this.props.renderModel(this.props.title);
   };
@@ -19,13 +18,12 @@ class HornedBeast extends React.Component {
         }}
       >
         <Card
-          bg="secondary"
           text="white"
           className="text-center p-3"
-          style={{ width: "100%", height: "500px" }}
+          style={{ width: "100%", height: "500px", backgroundColor: "#D83A56" }}
         >
           <Card.Img
-            style={{ maxHeight: "350px" }}
+            style={{ height: "250px" }}
             variant="top"
             src={this.props.images}
             alt={this.props.title}
